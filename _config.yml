@@ -9,9 +9,9 @@ title_separator: "|"
 # subtitle:
 name: Ivan Huang
 description: "Ivan Huang (ivanhjc)'s personal blog/notebook dealing with topics majorly focusing on programming, math, music etc."
-url: https://ivanhjc.github.io
-baseurl: /ivans-notes
-repository: ivanhjc/ivans-notes
+url: https://notes.ivanhjc.net
+# baseurl: /ivans-notes
+# repository: ivanhjc/ivans-notes
 # teaser:
 # logo:
 # masthead_title:
