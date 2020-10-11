@@ -144,7 +144,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Shanghai
   
 plugins:
   - jekyll-paginate
@@ -168,6 +168,11 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
 
 defaults:
   # _posts
