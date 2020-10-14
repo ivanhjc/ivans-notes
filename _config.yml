@@ -15,7 +15,7 @@ url: https://notes.ivanhjc.net
 # teaser:
 # logo:
 # masthead_title:
-# breadcrumbs
+# breadcrumbs: true
 words_per_minute: 200
 
 comments:
@@ -90,6 +90,7 @@ footer:
       
 include:
   - _pages
+  - _demo
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"

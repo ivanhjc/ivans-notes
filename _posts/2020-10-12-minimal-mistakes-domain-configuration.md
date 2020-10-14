@@ -1,26 +1,69 @@
 ---
-title: "minimal-mistakes: Domain configuration"
-date: 2020-10-11T01:00:00
+title: "How to set up custom domain for Github Pages using minimal-mistakes"
+last_modified_at: 2020-10-14
 categories:
-  - blog
+  - web
 tags:
   - Jekyll
   - minimal-mistakes
+  - blog
 ---
 
-As stated in [Site base URL](https://mmistakes.github.io/minimal-mistakes/docs/configuration/#site-base-url) when hosting your website on Github Pages you should specify `baseURL` to correspond to the URL format of Github project sites, i.e. "<username>.github.io/<project>". But when you assign a custom domain to the project and meanwhile force production environment by running:
+First you need to purchase a domain name from a seller. A domain name without the prefix like `ivanhjc.net` is called the root or apex domain, and a domain like `www.ivanhjc.net` or `blog.ivanhjc.net` is called a sub-domain. To use the root domain as the custom domain for Github Pages, you need to create an **A record** from your domain provider's admin panel like this:
 
-```bash
-bundle exec "JEKYLL_ENV`production jekyll serve -P 4001"
+| Name | Type | TTL | Data            |
+| ---- | ---- | --- | --------------- |
+| @    | A    | 1h  | 185.199.108.153 |
+|      |      |     | 185.199.109.153 |
+|      |      |     | 185.199.110.153 |
+|      |      |     | 185.199.111.153 |
+
+To use a subdomain create a **CNAME record** like this:
+
+| Name  | Type  | TTL | Data              |
+| ----- | ----- | --- | ----------------- |
+| notes | CNAME | 1h  | ivanhjc.github.io |
+
+Once the custom domain is properly configured, go to the project
+settings on Github, and then input the domain in the Custom Domain area.
+
+For more details see:
+
+  - [Github help: About custom domains and GitHub
+    Pages](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/about-custom-domains-and-github-pages)
+  - [Google help: Domain
+    forwarding](https://support.google.com/domains/answer/4522141)
+  - [Google help: About resource
+    records](https://support.google.com/domains/answer/3251147)
+
+In the case of using minimal-mistakes you need to mind these properties:
+`url`, `baseurl`, and `repository`. As stated in [Site base
+URL](https://mmistakes.github.io/minimal-mistakes/docs/configuration/#site-base-url)
+when hosting your website on Github Pages you need to specify `baseurl: <project>`
+to correspond to the URL format Github project sites use, i.e.
+`https://<username>.github.io/<project>/`, and when testing on local it runs
+on `http://localhost:4000/<project>/`. Since you have a custom
+domain you can omit `baseurl`. But if you're testing some features that
+require production environment such as `repository`, `comments`,
+`analytics`, etc. by running the following command:
+
+``` bash
+bundle exec "JEKYLL_ENV=production jekyll serve"
 ```
 
-things get confusing. First of all, you're forcing production on local because some features require so when you're testing on local, such as `repository`, `comments`, `analytics`, etc. When you specify both `baseurl` and `repository`, e.g.
+omitting `baseurl` would cause the path of assets to be wrongly parsed
+and the site would be a mess though it can be served. This is a bit
+confusing since the doc doesn't address this problem but with serveral
+trials you could find that the path of assets is resolved with the
+`repository` value to something like this:
 
-```yaml
-baseurl: /blog
-repository: ivanhjc/blog
+```
+pages/<repository>/assets/...
 ```
 
-everything is fine on `http://localhost:4001/blog/`. Since you have a custom domain you'd try to remove the `baseurl` and re-run the command. Now you'd see the site is messed up because it can't find the assets under the incorrectly parsed paths `pages/blog/assets/...`. If you change `repository`'s value to something else the paths would change accordingly. So MM is using `repository` to resolve the paths as well. You can remove both `baseurl` and `repository` and run without forcing production to make it right, but in this case comments would be lost as well... This is on the local.
-
-When the code is pushed and viewd on Github Pages, with both keys removed, everything is fine on the custom domain - no baseurl and comments are shown. How Github builds and runs the code is unknown, but I guess that's the proper way for now to set up for a project hosted on Github Pages with custom domain. The usages of `baseurl` and `repository` should be further examined. Currently I haven't seen the problem being addressed anywhere in the doc and other places.
+Because without `repository` you can't run in production mode it seems
+to be a dead end for this sort of configuration, i.e., you can't run
+without `baseurl` as well. However, you can remove `baseurl` and
+`repository` and run in development mode on local, and when pushed to
+Github everything will work fine, including features that require
+production environment, such as comments.
