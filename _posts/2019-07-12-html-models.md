@@ -2,11 +2,12 @@
 title: HTML models
 excerpt: HTML models that domonstrate hard-to-think layouts & effects.
 last_modified_at: 2020-10-14
+toc: true
+classes: narrow
 categories:
   - web
 tags:
   - frontend
-toc: true
 ---
 
 ## Layout
