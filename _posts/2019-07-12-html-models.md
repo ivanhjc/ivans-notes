@@ -100,4 +100,4 @@ Make a panel overlaying another panel slide out by hovering on the panel and rev
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-See also: [Demo](../_demo/slide-out-overlay-on-hovering-4-drections.html){:target="_blank"}
+See also: [Demo](/_demo/slide-out-overlay-on-hovering-4-drections.html){:target="_blank"}
