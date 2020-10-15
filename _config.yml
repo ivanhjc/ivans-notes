@@ -62,8 +62,8 @@ analytics:
 
 author:
   name: Ivan Huang
-  avatar: /assets/images/bio-photo.jpg
-  bio: "Software developer"
+  avatar: https://res.cloudinary.com/ivanhjc/image/upload/v1602736588/lADPBG1Q53OmyVjNCmzNCmw_2668_2668_rxbufo.jpg
+  bio: "Intrigued by intriguing things"
   location: Shenzhen, China
   links:
     - label: "Website"
