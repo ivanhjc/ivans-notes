@@ -2,6 +2,7 @@
 excerpt: "A collection of most commonly used Emacs commands"
 last_modified_at: 2020-10-14
 toc: true
+classes: narrow
 categories:
   - productivity
 tags:
