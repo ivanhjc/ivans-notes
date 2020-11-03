@@ -13,7 +13,7 @@ Working on Windows 10 and after using the web interface to create and run a back
 
 1. If just one file is selected to restore and the source folder remains where it is originally, the file can be restored to a new location but an error such as below is still reported:
 
-    ``` example
+    ```
     2020-11-02 17:00:13 +08 - [Error-Duplicati.Library.Main.Operation.RestoreHandler-PatchingFailed]: Failed to patch with remote file: "duplicati-b5b00656e1c2e4399905807e3f1c00507.dblock.zip.aes", message: Failed to decrypt data (invalid passphrase?): Invalid password or corrupted data
     ```
 
@@ -21,7 +21,7 @@ Working on Windows 10 and after using the web interface to create and run a back
 
 2. If just one file is selected to restore and the source folder is moved or renamed, the file can't be restored and errors such as below  are reported:
 
-    ``` example
+    ```
     2020-11-02 16:41:54 +08 - [Error-Duplicati.Library.Main.Operation.RestoreHandler-PatchingFailed]: Failed to patch with remote file: "duplicati-b0c61469407564d3588544e9f1e13423a.dblock.zip.aes", message: Failed to decrypt data (invalid passphrase?): Invalid password or corrupted data
     2020-11-02 16:41:54 +08 - [Error-Duplicati.Library.Main.Operation.RestoreHandler-RestoreFileFailed]: Could not find a part of the path 'D:\test-backup\【5】剑桥雅思真题5.pdf'.
     ```
@@ -45,7 +45,7 @@ To restore from b2 (see [The RESTORE command](https://duplicati.readthedocs.io/e
 
 Note that there should be no spaces before and after the `=` sign such as `--b2-accountid = "foo"`, because spaces are shell delimiters. You would see the error message if there are spaces:
 
-``` example
+```
 ErrorID: B2MissingUserID
 No "B2 Cloud Storage Account ID" given
 ```
