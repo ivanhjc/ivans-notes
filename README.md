@@ -1,0 +1,1 @@
+A blog site majorly focused on IT & art.
