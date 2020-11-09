@@ -37,10 +37,10 @@ In the case of using minimal-mistakes you need to mind these properties: `url`, 
 ``` bash
 bundle exec "JEKYLL_ENV=production jekyll serve"
 ```
-omitting `baseurl` would cause the path of assets to be wrongly parsedand the site would be a mess though it can be served. This is a bitconfusing since the doc doesn't address this problem but with serveraltrials you could find that the path of assets is resolved with the `repository` value to something like this:
+omitting `baseurl` would cause the path of assets to be wrongly parsed and the site would be a mess though it can be served. This is a bit confusing since the doc doesn't address this problem but with serveraltrials you could find that the path of assets is resolved with the `repository` value to something like this:
 
 ```
 pages/<repository>/assets/...
 ```
 
-Because without `repository` you can't run in production mode it seemsto be a dead end for this sort of configuration, i.e., you can't runwithout `baseurl` as well. However, you can remove `baseurl` and`repository` and run in development mode on local, and when pushed toGithub everything will work fine, including features that require production environment, such as comments.
+Because without `repository` you can't run in production mode it seems to be a dead end for this sort of configuration, i.e., you can't run without `baseurl` as well. However, you can remove `baseurl` and`repository` and run in development mode on local, and when pushed to Github everything will work fine, including features that require production environment, such as comments.
