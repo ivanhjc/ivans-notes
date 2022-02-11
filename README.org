@@ -1,0 +1,19 @@
+Ivan's personal notebook of various topics interested
+
+* Running offline
+To run the website offline, first you need to [[p:notes/web.org::#install-jekyll][install Jekyll]]. Make sure the versions of the following packages are the same:
+
+For Windows 10:
+#+begin_src bash
+  ruby -v   # ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x64-mingw32]
+  gem -v    # 3.1.4
+  bundle -v # Bundler version 2.1.4
+  jekyll -v # jekyll 4.1.1
+#+end_src
+
+Then you can run the website on your machine using:
+
+#+begin_src bash
+  bundle install
+  bundle exec jekyll serve
+#+end_src
