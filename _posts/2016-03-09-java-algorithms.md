@@ -2,9 +2,10 @@
 title: "Java: Algorithms"
 last_modified_at: 2020-10-14
 categories:
-  - programming
+  - Java
 tags:
-  - java
+  - Programming
+  - Backend
 classes: narrow
 toc: true
 ---

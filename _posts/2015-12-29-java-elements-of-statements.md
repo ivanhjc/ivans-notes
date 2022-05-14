@@ -2,9 +2,9 @@
 title: "Java: Elements of Statements"
 last_modified_at: 2020-10-14
 categories:
-  - programming
+  - Java
 tags:
-  - java
+  - Programming
 classes: narrow
 toc: true
 ---

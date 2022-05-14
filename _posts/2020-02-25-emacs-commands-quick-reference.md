@@ -4,9 +4,9 @@ last_modified_at: 2020-10-14
 toc: true
 classes: narrow
 categories:
-  - productivity
+  - Emacs
 tags:
-  - emacs
+  - Productivity
 ---
 
 # Commands
@@ -189,7 +189,6 @@ tags:
 | C-x 4 f | Open or create a file in another window                                     | find-file-other-window |
 | M-F2    | Open file in browser. `(global-set-key (kbd "<M-f2>") 'browse-url-of-file)` | browse-url-of-file     |
 | C-x C-d | Display a brief directory listing. `C-u ~` to display verbosely.            | list-directory         |
-|         |                                                                             |                        |
 
 ### Dired mode
 

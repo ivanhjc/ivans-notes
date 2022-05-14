@@ -2,9 +2,9 @@
 title: "Java: Introduction"
 last_modified_at: 2020-10-14
 categories:
-  - programming
+  - Java
 tags:
-  - java
+  - Programming
 ---
 
 Java is a high-level programming language. A high-level programming

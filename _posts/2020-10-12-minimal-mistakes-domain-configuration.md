@@ -2,11 +2,12 @@
 title: "How to set up custom domain for Github Pages using minimal-mistakes"
 last_modified_at: 2020-10-14
 categories:
-  - web
+  - CMS
 tags:
   - Jekyll
-  - minimal-mistakes
-  - blog
+  - Minimal Mistakes
+  - Blog
+  - Website
 ---
 
 First you need to purchase a domain name from a seller. A domain name without the prefix like `ivanhjc.net` is called the root or apex domain, and a domain like `www.ivanhjc.net` or `blog.ivanhjc.net` is called a sub-domain. To use the root domain as the custom domain for Github Pages, you need to create an **A record** from your domain provider's admin panel like this:

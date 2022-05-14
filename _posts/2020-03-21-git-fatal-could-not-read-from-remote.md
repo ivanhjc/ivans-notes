@@ -2,9 +2,10 @@
 title: 'Git "fatal: Could not read from remote repository"'
 last_modified_at: 2020-03-22
 categories:
-  - productivity
+  - Git
 tags:
-  - git
+  - Productivity
+  - VCS
 toc: true
 classes: narrow
 ---
