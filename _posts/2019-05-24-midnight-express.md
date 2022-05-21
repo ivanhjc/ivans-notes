@@ -1,12 +1,14 @@
 ---
 title: "What is a crime"
-excerpt: "What is a crime? What is a punishment? It seems to vary from time to time and from place to place."
+excerpt: "Review of Midnight Express"
 last_modified_at: 2019-05-24
 categories:
   - Personal
 tags:
   - Film
 ---
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lhuutAnXBzQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Intense and mind-boggling. A seemingly deserving punishment from a stupid mistake turned out to be violating humanity. Humans weren\'t treated equally as humans sometimes. Sometimes they\'re benefits and sometimes they\'re cannon fodders, or just flickering head counts for the accountants. Why is it so simple for people to lose mercy yet so hard to retain justice and good ethics?
 
