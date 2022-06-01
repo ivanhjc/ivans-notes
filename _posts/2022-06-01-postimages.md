@@ -37,8 +37,19 @@ there are four direct links, which are all supposed to load the original-sized i
 | Directly | original  | redirect | redirect | redirect |
 | \<img>   | original  | original | original | original |
 
-Link 1 is the direct link copied from <https://postimg.cc/YhN6XT8C> and is the one that I thought should display the original-sized image but actually displayed a blurry thumbnail. But this only occurred on Firefox. In Chrome it was displayed as the original-sized image. From the inspector of Firefox I could see the actual image retrieved was a much smaller one. Then I found link 3 and 4 that could be displayed in their original size. You can see a slight difference between them, that is, link 4 has an extra hypen. So I tried to mimic this to get link 2 and it worked!
+Link 1 is the direct link copied from <https://postimg.cc/YhN6XT8C>
+
+<figure>
+	<a href="https://i.postimg.cc/z5LPFBms/Snipaste-2022-06-01-13-03-30.png"><img src="https://i.postimg.cc/z5LPFBms/Snipaste-2022-06-01-13-03-30.png"></a>
+</figure>
+
+and is the one that I thought should display the original-sized image but actually displayed a blurry thumbnail. But this only occurred on Firefox. In Chrome it was displayed as the original-sized image. From the inspector of Firefox I could see the actual image retrieved was a much smaller one. Then I found link 3 and 4 that could be displayed in their original size. You can see a slight difference between them, that is, link 4 has an extra hypen. So I tried to mimic this to get link 2 and it worked!
 
 This problem was spotted when I wrote this [post]({{site.baseurl}}/emacs/emacs-encoding) where the screenshots were displayed as blurry thumbnails. At first I thought it's a problem of [minimal-mistakes](https://mmistakes.github.io/minimal-mistakes/) but then narrowed it down to the links themselves. The solution is adding an extra hypen before the antepenultimate character!
 
-**Update**: After I fiddled around with the demo suddenly the original link (link 1) somehow displayed the original-sized image in Firefox! Now I have no idea what's going on. Maybe it's because network proxy because I turned on my proxy for a while. Maybe it's because the server of <https://postimages.org> detected that someone was trying desperately to get this link right...
+**Update**: After I fiddled around with the demo suddenly the original link (link 1) somehow displayed the original-sized image in Firefox! Now I have no idea what's going on. Maybe it's because of the network because I turned on my proxy for a while. Maybe it's because the server of <https://postimages.org> detected that someone was trying desperately to get this link right...
+
+
+**Update**: After I cleared the cookies and cache all links above if opend from `<img>` couldn't be displayed as original-sized images but returned to blurry thumbnails no matter the browser in use. I guess the reason why they could display as original-sized images at some point is because the browsers were loading them from the cache and those original-sized images were cached at some point! I still don't know why they weren't always displayed and how to force them to display in their original size. Guess I just have to change to another image hosting service provider.
+
+**Update**: Finally I can say for sure what's causing all the fuss. It's because of the network! As all the troubles the GFW has caused this is just yet another one. When I cleared the cache and turned on my proxy every link could display in their original size no matter the browser. It appears postimages.org could still send a thumbnail even if the link was blocked. I feel the effort in making information more transcendent!
