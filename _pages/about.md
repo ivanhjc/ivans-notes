@@ -12,5 +12,5 @@ Backend guy specialized in designing and deploying large-scale, data-intensive a
 
 Throughout the writing of the posts the versions of Emacs I used are 
 
+- GNU Emacs 27.1 (build 1, x86_64-w64-mingw32) of 2020-08-22
 - GNU Emacs 27.2 (build 1, x86_64-w64-mingw32) of 2021-03-26
-
