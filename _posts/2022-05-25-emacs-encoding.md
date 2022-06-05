@@ -9,6 +9,8 @@ tags:
   - File
 ---
 
+**NOTE**: As of writing the version of Emacs I used is `GNU Emacs 27.2 (build 1, x86_64-w64-mingw32) of 2021-03-26`.
+
 Sometimes when opening files in Emacs you may see them containing non-ascii characters displayed as code points. It's because the file is displayed in the wrong encoding. This happens because files don't really have an accurate description of what encoding they should be displayed with in themselves (see this [discussion](https://softwareengineering.stackexchange.com/q/187169/173891)). So Emacs has to do some guesswork according to the current language environment. If the encoding with which the file should be displayed is not supported by the current language environment, it would be displayed in a wrong encoding so the characters would look messed up. For example, when you open a file originally encoded in Chinese-GBK in the English language environment it would display code points in place of Chinese characters because the English language environment doesn't have an encoding scheme that supports Chinese characters.
 
 To see your current language environment check the variable `current-language-environment`. To see what coding systems are supported by a language environment use the command `describe-language-environment` (`C-h L`). To check the current encoding of the character at point use `what-cursor-position` (`C-u C-x =`). The leftmost character on the mode line indicates the current buffer's encoding. For example, `U` indicates the UTF-8 encoding. You can hover mouse on it to show the tooltip. The area right next to the encoding area tells the EOL (End of Line) style used for the current buffer, such as Unix (LF), Windows (CRLF), or Mac (CR).

@@ -9,6 +9,8 @@ tags:
   - Productivity
 ---
 
+**NOTE**: As of writing the version of Emacs I used is `GNU Emacs 27.1 (build 1, x86_64-w64-mingw32) of 2020-08-22`.
+
 # Commands
 
   - Key-bindings (or shortcuts) are represented with symbols specified
