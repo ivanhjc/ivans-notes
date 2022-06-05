@@ -1,7 +1,7 @@
 ---
 title: "Non-ascii characters displayed as code points in files"
 excerpt: "Sometimes when opening files in Emacs you may see them containing non-ascii characters displayed as code points. It's because the file is displayed in the wrong encoding..."
-last_modified_at: 2022-05-25
+last_modified_at: 2022-06-05
 categories:
   - Emacs
 tags:
@@ -41,7 +41,11 @@ These commands are also listed under `Options > Multilingual Environment > Set C
 
 Some other utility buffers may also display non-ascii characters incorrectcly. You can follow a similar approach as described above to resolve these kinds of problems. For example, Eshell buffers may not display or read Chinese characters as expected if your `current-language-environment` is English and your native shell's encoding is `Chinese-GB`:
 
+The Eshell buffer couldn't display the output of the `tree` command correctly:
+
 ![](https://i.postimg.cc/kXzT5mbK/screenshot-2021-09-09-eshell-coding-mismatch.png)
+
+The Eshell buffer couldn't find the file with Chinese characters in its name using `es`:
 
 ![](https://i.postimg.cc/KvR9FzRm/screenshot-2021-09-09-eshell-coding-mismatch-es1.png)
 
